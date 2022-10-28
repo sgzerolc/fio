@@ -1,0 +1,69 @@
+[sam@10 fio]$ sudo t/zbd/test-zbd-support /dev/vda
+First sequential zone starts at sector 0; zone size: 64 MB
+Running test 01 ... PASS
+Running test 02 ... PASS
+Running test 03 ... SKIP    /dev/vda does not have 129 sequential zones
+Running test 04 ... SKIP    /dev/vda does not have 130 sequential zones
+Running test 05 ... PASS
+Running test 06 ... PASS
+Running test 07 ... FAIL
+Running test 08 ... FAIL
+Running test 09 ... SKIP    /dev/vda is not a SCSI device
+Running test 10 ... SKIP    /dev/vda is not a SCSI device
+Running test 11 ... FAIL
+Running test 12 ... FAIL
+Running test 13 ... FAIL
+Running test 14 ... SKIP    /dev/vda does not have enough conventional zones
+Running test 15 ... PASS
+Running test 16 ... FAIL
+Running test 17 ... FAIL
+Running test 18 ... PASS
+Running test 19 ... PASS
+Running test 20 ... PASS
+Running test 21 ... PASS
+Running test 22 ... PASS
+Running test 23 ... PASS
+Running test 24 ... PASS
+Running test 25 ... blkzone: /dev/vda: BLKRESETZONE ioctl failed: Invalid argument
+blkzone: /dev/vda: offset is greater than device size
+blkzone: /dev/vda: offset is greater than device size
+blkzone: /dev/vda: offset is greater than device size
+PASS
+Running test 26 ... PASS
+Running test 27 ... PASS
+Running test 28 ... SKIP    /dev/vda does not have 65 sequential zones
+Running test 29 ... SKIP    /dev/vda does not have 80 sequential zones
+Running test 30 ... FAIL
+Running test 31 ... PASS
+Running test 32 ... PASS
+Running test 33 ... PASS
+Running test 34 ... PASS
+Running test 35 ... PASS
+Running test 36 ... PASS
+Running test 37 ... PASS
+Running test 38 ... PASS
+Running test 39 ... PASS
+Running test 40 ... PASS
+Running test 41 ... PASS
+Running test 42 ... SKIP    /dev/vda is not a regular block device
+Running test 43 ... SKIP    /dev/vda is not a regular block device
+Running test 44 ... PASS
+Running test 45 ... PASS
+Running test 46 ... FAIL
+Running test 47 ... PASS
+Running test 48 ... SKIP    /dev/vda does not have 80 sequential zones
+Running test 49 ... SKIP    /dev/vda is not a regular block device
+Running test 50 ... SKIP    /dev/vda does not have 8 conventional zones
+Running test 51 ... SKIP    /dev/vda does not have 8 conventional zones
+Running test 52 ... SKIP    /dev/vda does not have 8 conventional zones
+Running test 53 ... SKIP    /dev/vda does not have 4 conventional zones
+Running test 54 ... FAIL
+Running test 55 ... SKIP    /dev/vda does not have 13 sequential zones
+Running test 56 ... SKIP    /dev/vda is not a regular block device
+Running test 57 ... FAIL
+Running test 58 ... SKIP    /dev/vda does not have 128 sequential zones
+29 tests passed
+ 18 tests skipped
+ 11 tests failed
+Run time: 00:01:51
+

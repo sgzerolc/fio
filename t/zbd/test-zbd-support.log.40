@@ -1,0 +1,36 @@
+
+fio --max-jobs=16 --aux-path=/tmp --allow_file_create=0 --significant_figures=10 --name=/dev/vda --filename=/dev/vda --rw=read --ioengine=psync --offset=0 --bs=4096 --size=4096 --zonemode=strided --randseed=2075598693 --thread=1 --direct=1
+
+fio: --zonesize must be specified when using --zonemode=strided.
+
+fio --max-jobs=16 --aux-path=/tmp --allow_file_create=0 --significant_figures=10 --name=/dev/vda --filename=/dev/vda --rw=read --ioengine=psync --offset=0 --bs=4096 --size=4096 --zonemode=strided --zonesize=4096 --randseed=1374190702 --thread=1 --direct=1
+
+/dev/vda: (g=0): rw=read, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=psync, iodepth=1
+fio-3.32-75-gc470
+Starting 1 thread
+
+/dev/vda: (groupid=0, jobs=1): err= 0: pid=5791: Fri Oct 28 14:19:32 2022
+  read: IOPS=1000, BW=4096000B/s (4096000B/s)(4096B/1msec)
+    clat (nsec): min=714264, max=714264, avg=714264.00, stdev= 0.00
+     lat (nsec): min=715379, max=715379, avg=715379.00, stdev= 0.00
+    clat percentiles (usec):
+     |  1.00th=[  717],  5.00th=[  717], 10.00th=[  717], 20.00th=[  717],
+     | 30.00th=[  717], 40.00th=[  717], 50.00th=[  717], 60.00th=[  717],
+     | 70.00th=[  717], 80.00th=[  717], 90.00th=[  717], 95.00th=[  717],
+     | 99.00th=[  717], 99.50th=[  717], 99.90th=[  717], 99.95th=[  717],
+     | 99.99th=[  717]
+  lat (usec)   : 750=100.00%
+  cpu          : usr=0.00%, sys=0.00%, ctx=3, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=1,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=4096000B/s (4096000B/s), 4096000B/s-4096000B/s (4096000B/s-4096000B/s), io=4096B (4096B), run=1-1msec
+
+Disk stats (read/write):
+  vda: ios=0/0, merge=0/0, ticks=0/0, in_queue=0, util=0.00%
+read: 4096 <> 4096
+PASS

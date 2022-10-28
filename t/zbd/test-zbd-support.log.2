@@ -1,0 +1,14 @@
+
+fio --max-jobs=16 --aux-path=/tmp --allow_file_create=0 --significant_figures=10 --ioengine=psync --name=job1 --filename=/dev/vda --rw=write --direct=1 --zonemode=zbd --offset=134217728 --bs=134217728 --size=134217728
+
+job1: (g=0): rw=write, bs=(R) 134217728B-134217728B, (W) 134217728B-134217728B, (T) 134217728B-134217728B, ioengine=psync, iodepth=1
+fio-3.32-75-gc470
+Starting 1 process
+fio: pid=5300, err=22/file:zbd.c:1937, func=I/O buflen exceeds zone size, error=Invalid argument
+
+
+Run status group 0 (all jobs):
+
+Disk stats (read/write):
+  vda: ios=0/0, merge=0/0, ticks=0/0, in_queue=0, util=0.00%
+PASS

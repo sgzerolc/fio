@@ -1,0 +1,10 @@
+
+fio --max-jobs=16 --aux-path=/tmp --allow_file_create=0 --significant_figures=10 --name=/dev/vda --filename=/dev/vda --ioengine=psync --iodepth=1 --rw=randwrite --bs=4096 --offset=0 --size=67108864 --do_verify=1 --verify=md5 --randseed=1759120335 --thread=1 --direct=1
+
+/dev/vda: (g=0): rw=randwrite, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=psync, iodepth=1
+fio-3.32-75-gc470
+Starting 1 thread
+fio: io_u error on file /dev/vda: Input/output error: write offset=4046848, buflen=4096
+fio: first I/O failed. If /dev/vda is a zoned block device, consider --zonemode=zbd
+fio: pid=5841, err=5/file:io_u.c:1876, func=io_u error, error=Input/output error
+PASS

@@ -1,0 +1,8 @@
+
+fio --max-jobs=16 --aux-path=/tmp --allow_file_create=0 --significant_figures=10 --filename=/dev/vda --randseed=1707222272 --name=write_job --rw=write --ioengine=psync --bs=4096 --zonemode=zbd --zonesize=67108864 --thread=1 --direct=1 --offset=134217728 --size=134217728 --name=/dev/vda --wait_for=write_job --ioengine=libaio --iodepth=64 --rw=randread --bs=16K --zonemode=zbd --zonesize=67108864 --offset=0 --size=268435456 --thread=1 --direct=1
+
+fio: engine libaio not loadable
+fio: failed to load engine
+write_job: (g=0): rw=write, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=psync, iodepth=1
+fio: file:ioengines.c:134, func=dlopen, error=libaio: cannot open shared object file: No such file or directory
+FAIL

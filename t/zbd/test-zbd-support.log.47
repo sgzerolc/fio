@@ -1,0 +1,11 @@
+
+fio --max-jobs=16 --aux-path=/tmp --allow_file_create=0 --significant_figures=10 --name=/dev/vda --filename=/dev/vda --offset=0 --size=268435456 --zonemode=zbd --ioengine=psync --rw=write --bs=4096 --zoneskip=1 --randseed=1907828778 --thread=1 --direct=1
+
+/dev/vda: (g=0): rw=write, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=psync, iodepth=1
+fio-3.32-75-gc470
+Starting 1 thread
+/dev/vda: zoneskip 1 is not a multiple of the device zone size 67108864.
+
+
+Run status group 0 (all jobs):
+PASS

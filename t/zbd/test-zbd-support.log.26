@@ -1,0 +1,27 @@
+
+fio --max-jobs=16 --aux-path=/tmp --allow_file_create=0 --significant_figures=10 --name=/dev/vda --filename=/dev/vda --ioengine=psync --rw=write --thread=1 --do_verify=1 --verify=md5 --direct=1 --bs=4K --offset=0 --size=67108864 --loops=4 --randseed=708406103 --zonemode=zbd --zonesize=67108864 --group_reporting=1 --gtod_reduce=1
+
+/dev/vda: (g=0): rw=write, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=psync, iodepth=1
+fio-3.32-75-gc470
+Starting 1 thread
+
+/dev/vda: (groupid=0, jobs=1): err= 0: pid=5620: Fri Oct 28 14:18:15 2022
+  read: IOPS=9160, BW=37522428B/s (37522428B/s)(268435456B/7154msec)
+  write: IOPS=8508, BW=34852694B/s (34852694B/s)(268435456B/7702msec); 4 zone resets
+   bw (  KiB/s): min= 4624, max=37368, per=85.57%, avg=29124.00, stdev=9320.71, samples=18
+   iops        : min= 1156, max= 9342, avg=7281.00, stdev=2330.18, samples=18
+  cpu          : usr=12.89%, sys=11.03%, ctx=262539, majf=0, minf=234
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=65536,65536,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=37522428B/s (37522428B/s), 37522428B/s-37522428B/s (37522428B/s-37522428B/s), io=268435456B (268435456B), run=7154-7154msec
+  WRITE: bw=34852694B/s (34852694B/s), 34852694B/s-34852694B/s (34852694B/s-34852694B/s), io=268435456B (268435456B), run=7702-7702msec
+
+Disk stats (read/write):
+  vda: ios=63933/65540, merge=0/0, ticks=5383/5631, in_queue=11014, util=99.29%
+written: 268435456 <> 268435456
+PASS

@@ -1,0 +1,5 @@
+
+fio --max-jobs=16 --aux-path=/tmp --allow_file_create=0 --significant_figures=10 --name=/dev/vda --filename=/dev/vda --rw=read --ioengine=psync --offset=0 --bs=4096 --size=4096 --zonemode=none --zonesize=1 --randseed=1065359131 --thread=1 --direct=1
+
+fio: --zonemode=none and --zonesize are not compatible.
+PASS

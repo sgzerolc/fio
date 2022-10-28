@@ -1,0 +1,12 @@
+
+fio --max-jobs=16 --aux-path=/tmp --allow_file_create=0 --significant_figures=10 --name=/dev/vda --filename=/dev/vda --rw=read --ioengine=psync --offset=0 --bs=4096 --size=4096 --zonemode=zbd --zonesize=134217728 --randseed=1074887220 --thread=1 --direct=1
+
+/dev/vda: (g=0): rw=read, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=psync, iodepth=1
+fio-3.32-75-gc470
+Starting 1 thread
+fio: /dev/vda job parameter zonesize 134217728 does not match disk zone size 67108864.
+fio: pid=0, err=22/file:zbd.c:985, func=zbd_create_zone_info() failed, error=Invalid argument
+
+
+Run status group 0 (all jobs):
+PASS

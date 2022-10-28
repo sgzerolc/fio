@@ -1,0 +1,7 @@
+
+fio --max-jobs=16 --aux-path=/tmp --allow_file_create=0 --significant_figures=10 --name=job --filename=/dev/vda --ioengine=libaio --time_based=1 --runtime=30s --continue_on_error=0 --offset=0 --size=536870912 --direct=1 --iodepth=1 --rw=randrw:2 --rwmixwrite=25 --bsrange=4k-67108864 --zonemode=zbd --zonesize=67108864 --verify=crc32c --do_verify=1 --verify_backlog=2 --experimental_verify=1 --alloc-size=65536 --random_generator=tausworthe64 --debug=zbd
+
+fio: engine libaio not loadable
+fio: failed to load engine
+fio: file:ioengines.c:134, func=dlopen, error=libaio: cannot open shared object file: No such file or directory
+FAIL
