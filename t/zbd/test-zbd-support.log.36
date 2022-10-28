@@ -1,8 +1,8 @@
 
-fio --max-jobs=16 --aux-path=/tmp --allow_file_create=0 --significant_figures=10 --name=/dev/vda --filename=/dev/vda --offset=0 --size=67108352 --ioengine=psync --iodepth=1 --rw=write --do_verify=1 --verify=md5 --bs=16777216 --zonemode=zbd --zonesize=67108864 --randseed=1222727746 --thread=1 --direct=1
+fio --max-jobs=16 --aux-path=/tmp --allow_file_create=0 --significant_figures=10 --name=/dev/vda --filename=/dev/vda --offset=0 --size=67108352 --ioengine=psync --iodepth=1 --rw=write --do_verify=1 --verify=md5 --bs=16777216 --zonemode=zbd --zonesize=67108864 --randseed=1665235846 --thread=1 --direct=1
 
 /dev/vda: (g=0): rw=write, bs=(R) 16777216B-16777216B, (W) 16777216B-16777216B, (T) 16777216B-16777216B, ioengine=psync, iodepth=1
-fio-3.32-75-gc470
+fio-3.32-76-g32676-dirty
 Starting 1 thread
 /dev/vda: io_size must be at least one zone
 

@@ -1,5 +1,5 @@
 
-fio --max-jobs=16 --aux-path=/tmp --allow_file_create=0 --significant_figures=10 --name=/dev/vda --filename=/dev/vda --offset=0 --size=268435456 --zonemode=zbd --zone_reset_frequency=.4:.6 --randseed=1222991092 --thread=1 --direct=1
+fio --max-jobs=16 --aux-path=/tmp --allow_file_create=0 --significant_figures=10 --name=/dev/vda --filename=/dev/vda --offset=0 --size=268435456 --zonemode=zbd --zone_reset_frequency=.4:.6 --randseed=442385661 --thread=1 --direct=1
 
 the list exceeding max length 1
 PASS

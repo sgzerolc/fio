@@ -1,5 +1,5 @@
 
-fio --max-jobs=16 --aux-path=/tmp --allow_file_create=0 --significant_figures=10 --name=/dev/vda --filename=/dev/vda --offset=0 --size=268435456 --zonemode=zbd --zone_reset_frequency=-1 --randseed=77792150 --thread=1 --direct=1
+fio --max-jobs=16 --aux-path=/tmp --allow_file_create=0 --significant_figures=10 --name=/dev/vda --filename=/dev/vda --offset=0 --size=268435456 --zonemode=zbd --zone_reset_frequency=-1 --randseed=1701531359 --thread=1 --direct=1
 
 value out of range: -1.000000 (range min: 0.000000)
 fio: failed parsing zone_reset_frequency=-1

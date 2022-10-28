@@ -1,7 +1,50 @@
 
-fio --max-jobs=16 --aux-path=/tmp --allow_file_create=0 --significant_figures=10 --name=/dev/vda --filename=/dev/vda --ioengine=libaio --iodepth=8 --rw=randrw --bs=4K --zonemode=zbd --zonesize=67108864 --offset=738197504 --loops=2 --norandommap=1 --size=67108864 --randseed=577116986 --thread=1 --direct=1
+fio --max-jobs=16 --aux-path=/tmp --allow_file_create=0 --significant_figures=10 --name=/dev/vda --filename=/dev/vda --ioengine=libaio --iodepth=8 --rw=randrw --bs=4K --zonemode=zbd --zonesize=67108864 --offset=738197504 --loops=2 --norandommap=1 --size=67108864 --randseed=916608507 --thread=1 --direct=1
 
-fio: engine libaio not loadable
-fio: failed to load engine
-fio: file:ioengines.c:134, func=dlopen, error=libaio: cannot open shared object file: No such file or directory
-FAIL
+/dev/vda: (g=0): rw=randrw, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=8
+fio-3.32-76-g32676-dirty
+Starting 1 thread
+
+/dev/vda: (groupid=0, jobs=1): err= 0: pid=2626: Fri Oct 28 14:58:14 2022
+  read: IOPS=14833, BW=60758574B/s (60758574B/s)(66834432B/1100msec)
+    slat (usec): min=10, max=631, avg=27.02, stdev=15.46
+    clat (usec): min=49, max=3863, avg=211.58, stdev=108.84
+     lat (usec): min=79, max=3879, avg=238.60, stdev=111.97
+    clat percentiles (usec):
+     |  1.00th=[   82],  5.00th=[  113], 10.00th=[  128], 20.00th=[  149],
+     | 30.00th=[  165], 40.00th=[  180], 50.00th=[  192], 60.00th=[  210],
+     | 70.00th=[  231], 80.00th=[  262], 90.00th=[  314], 95.00th=[  363],
+     | 99.00th=[  502], 99.50th=[  611], 99.90th=[  971], 99.95th=[ 2008],
+     | 99.99th=[ 3851]
+   bw (  KiB/s): min=57792, max=60904, per=100.00%, avg=59348.00, stdev=2200.52, samples=2
+   iops        : min=14448, max=15226, avg=14837.00, stdev=550.13, samples=2
+  write: IOPS=14955, BW=61257541B/s (61257541B/s)(67383296B/1100msec); 1 zone resets
+    slat (usec): min=3, max=2314, avg=17.10, stdev=23.41
+    clat (usec): min=95, max=3869, avg=271.76, stdev=119.58
+     lat (usec): min=118, max=3924, avg=288.85, stdev=122.38
+    clat percentiles (usec):
+     |  1.00th=[  145],  5.00th=[  167], 10.00th=[  180], 20.00th=[  200],
+     | 30.00th=[  215], 40.00th=[  231], 50.00th=[  247], 60.00th=[  269],
+     | 70.00th=[  293], 80.00th=[  326], 90.00th=[  383], 95.00th=[  441],
+     | 99.00th=[  635], 99.50th=[  807], 99.90th=[ 1385], 99.95th=[ 2114],
+     | 99.99th=[ 3851]
+   bw (  KiB/s): min=58624, max=61752, per=100.00%, avg=60188.00, stdev=2211.83, samples=2
+   iops        : min=14656, max=15438, avg=15047.00, stdev=552.96, samples=2
+  lat (usec)   : 50=0.01%, 100=1.45%, 250=62.83%, 500=33.93%, 750=1.34%
+  lat (usec)   : 1000=0.27%
+  lat (msec)   : 2=0.11%, 4=0.07%
+  cpu          : usr=16.38%, sys=35.30%, ctx=36172, majf=0, minf=1
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=99.9%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.1%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=16317,16451,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+   READ: bw=60758574B/s (60758574B/s), 60758574B/s-60758574B/s (60758574B/s-60758574B/s), io=66834432B (66834432B), run=1100-1100msec
+  WRITE: bw=61257541B/s (61257541B/s), 61257541B/s-61257541B/s (61257541B/s-61257541B/s), io=67383296B (67383296B), run=1100-1100msec
+
+Disk stats (read/write):
+  vda: ios=13302/6899, merge=0/6476, ticks=1894/1325, in_queue=3219, util=90.45%
+Total number of bytes read and written: 134217728 <> 67108864
+PASS

@@ -1,7 +1,218 @@
 
 fio --max-jobs=16 --aux-path=/tmp --allow_file_create=0 --significant_figures=10 --name=job --filename=/dev/vda --ioengine=libaio --time_based=1 --runtime=30s --continue_on_error=0 --offset=0 --size=536870912 --direct=1 --iodepth=1 --rw=randrw:2 --rwmixwrite=25 --bsrange=4k-67108864 --zonemode=zbd --zonesize=67108864 --verify=crc32c --do_verify=1 --verify_backlog=2 --experimental_verify=1 --alloc-size=65536 --random_generator=tausworthe64 --debug=zbd
 
-fio: engine libaio not loadable
-fio: failed to load engine
-fio: file:ioengines.c:134, func=dlopen, error=libaio: cannot open shared object file: No such file or directory
+fio: set debug option zbd
+job: (g=0): rw=randrw, bs=(R) 4096B-67108864B, (W) 4096B-67108864B, (T) 4096B-67108864B, ioengine=libaio, iodepth=1
+fio-3.32-76-g32676-dirty
+Starting 1 process
+zbd      3053  /dev/vda: zbd model string: host-managed
+zbd      3053  Device /dev/vda has 12 zones of size 65536 KB
+zbd      3053  /dev/vda: max open zones supported by device: 0
+zbd      3053  /dev/vda: using max open zones limit: 0
+zbd      3055  zbd_file_reset(/dev/vda): swd = 82575360
+zbd      3055  /dev/vda: examining zones 0 .. 8
+zbd      3055  /dev/vda: resetting zone 0
+zbd      3055  /dev/vda: resetting wp of zone 0.
+zbd      3055  /dev/vda: resetting zone 1
+zbd      3055  /dev/vda: resetting wp of zone 1.
+zbd      3055  /dev/vda: resetting zone 2
+zbd      3055  /dev/vda: resetting wp of zone 2.
+zbd      3055  /dev/vda: resetting zone 3
+zbd      3055  /dev/vda: resetting wp of zone 3.
+zbd      3055  /dev/vda: resetting zone 4
+zbd      3055  /dev/vda: resetting wp of zone 4.
+zbd      3055  /dev/vda: resetting zone 5
+zbd      3055  /dev/vda: resetting wp of zone 5.
+zbd      3055  /dev/vda: resetting zone 6
+zbd      3055  /dev/vda: resetting wp of zone 6.
+zbd      3055  /dev/vda: resetting zone 7
+zbd      3055  /dev/vda: resetting wp of zone 7.
+zbd      3055  /dev/vda: queued I/O (469762048, 21327872) for zone 7
+zbd      3055  /dev/vda: terminate I/O (469762048, 21327872) for zone 7
+zbd      3055  /dev/vda: queued I/O (469762048, 21327872) for zone 7
+zbd      3055  /dev/vda: terminate I/O (469762048, 21327872) for zone 7
+zbd      3055  /dev/vda: queued I/O (469762048, 21327872) for zone 7
+zbd      3055  /dev/vda: terminate I/O (469762048, 21327872) for zone 7
+zbd      3055  /dev/vda: queued I/O (491089920, 30081024) for zone 7
+zbd      3055  /dev/vda: terminate I/O (491089920, 30081024) for zone 7
+zbd      3055  /dev/vda: queued I/O (470958080, 37371904) for zone 7
+zbd      3055  /dev/vda: terminate I/O (470958080, 37371904) for zone 7
+zbd      3055  /dev/vda: queued I/O (470937600, 14016512) for zone 7
+zbd      3055  /dev/vda: terminate I/O (470937600, 14016512) for zone 7
+zbd      3055  /dev/vda: queued I/O (67108864, 37371904) for zone 1
+zbd      3055  /dev/vda: terminate I/O (67108864, 37371904) for zone 1
+zbd      3055  /dev/vda: queued I/O (484954112, 557056) for zone 7
+zbd      3055  /dev/vda: terminate I/O (484954112, 557056) for zone 7
+zbd      3055  /dev/vda: queued I/O (470261760, 50569216) for zone 7
+zbd      3055  /dev/vda: terminate I/O (470261760, 50569216) for zone 7
+zbd      3055  /dev/vda: queued I/O (474017792, 4595712) for zone 7
+zbd      3055  /dev/vda: terminate I/O (474017792, 4595712) for zone 7
+zbd      3055  /dev/vda: queued I/O (0, 155648) for zone 0
+zbd      3055  /dev/vda: terminate I/O (0, 155648) for zone 0
+zbd      3055  /dev/vda: queued I/O (472924160, 45719552) for zone 7
+zbd      3055  /dev/vda: terminate I/O (472924160, 45719552) for zone 7
+zbd      3055  /dev/vda: queued I/O (201326592, 557056) for zone 3
+zbd      3055  /dev/vda: terminate I/O (201326592, 557056) for zone 3
+zbd      3055  /dev/vda: queued I/O (518643712, 192512) for zone 7
+zbd      3055  /dev/vda: terminate I/O (518643712, 192512) for zone 7
+zbd      3055  /dev/vda: queued I/O (201326592, 557056) for zone 3
+zbd      3055  /dev/vda: terminate I/O (201326592, 557056) for zone 3
+zbd      3055  /dev/vda: queued I/O (201326592, 557056) for zone 3
+zbd      3055  /dev/vda: terminate I/O (201326592, 557056) for zone 3
+zbd      3055  /dev/vda: queued I/O (486453248, 32673792) for zone 7
+zbd      3055  /dev/vda: terminate I/O (486453248, 32673792) for zone 7
+zbd      3055  /dev/vda: queued I/O (470667264, 2949120) for zone 7
+zbd      3055  /dev/vda: terminate I/O (470667264, 2949120) for zone 7
+zbd      3055  /dev/vda: queued I/O (474599424, 10452992) for zone 7
+zbd      3055  /dev/vda: terminate I/O (474599424, 10452992) for zone 7
+zbd      3055  /dev/vda: queued I/O (485052416, 32571392) for zone 7
+zbd      3055  /dev/vda: terminate I/O (485052416, 32571392) for zone 7
+zbd      3055  /dev/vda: queued I/O (268435456, 50569216) for zone 4
+zbd      3055  /dev/vda: terminate I/O (268435456, 50569216) for zone 4
+zbd      3055  /dev/vda: queued I/O (319004672, 16539648) for zone 4
+zbd      3055  /dev/vda: terminate I/O (319004672, 16539648) for zone 4
+zbd      3055  /dev/vda: queued I/O (67108864, 37371904) for zone 1
+zbd      3055  /dev/vda: terminate I/O (67108864, 37371904) for zone 1
+zbd      3055  /dev/vda: queued I/O (335544320, 65716224) for zone 5
+zbd      3055  /dev/vda: terminate I/O (335544320, 65716224) for zone 5
+zbd      3055  /dev/vda: queued I/O (474091520, 14327808) for zone 7
+zbd      3055  /dev/vda: terminate I/O (474091520, 14327808) for zone 7
+zbd      3055  /dev/vda: queued I/O (488419328, 29065216) for zone 7
+zbd      3055  /dev/vda: terminate I/O (488419328, 29065216) for zone 7
+zbd      3055  /dev/vda: queued I/O (469762048, 22228992) for zone 7
+zbd      3055  /dev/vda: terminate I/O (469762048, 22228992) for zone 7
+zbd      3055  /dev/vda: queued I/O (480264192, 39682048) for zone 7
+zbd      3055  /dev/vda: terminate I/O (480264192, 39682048) for zone 7
+zbd      3055  /dev/vda: queued I/O (521170944, 4595712) for zone 7
+zbd      3055  /dev/vda: terminate I/O (521170944, 4595712) for zone 7
+zbd      3055  /dev/vda: queued I/O (525766656, 192512) for zone 7
+zbd      3055  /dev/vda: terminate I/O (525766656, 192512) for zone 7
+zbd      3055  /dev/vda: queued I/O (201326592, 557056) for zone 3
+zbd      3055  /dev/vda: terminate I/O (201326592, 557056) for zone 3
+zbd      3055  /dev/vda: queued I/O (201326592, 557056) for zone 3
+zbd      3055  /dev/vda: terminate I/O (201326592, 557056) for zone 3
+zbd      3055  /dev/vda: queued I/O (476393472, 2850816) for zone 7
+zbd      3055  /dev/vda: terminate I/O (476393472, 2850816) for zone 7
+zbd      3055  /dev/vda: queued I/O (525959168, 2949120) for zone 7
+zbd      3055  /dev/vda: terminate I/O (525959168, 2949120) for zone 7
+zbd      3055  /dev/vda: queued I/O (0, 155648) for zone 0
+zbd      3055  /dev/vda: terminate I/O (0, 155648) for zone 0
+zbd      3055  /dev/vda: queued I/O (528908288, 2850816) for zone 7
+zbd      3055  /dev/vda: terminate I/O (528908288, 2850816) for zone 7
+zbd      3055  zbd_convert_to_open_zone(/dev/vda): starting from zone 4 (offset 282677248, buflen 66752512)
+zbd      3055  zbd_convert_to_open_zone(/dev/vda): returning zone 5
+zbd      3055  /dev/vda: queued I/O (401260544, 1372160) for zone 5
+zbd      3055  /dev/vda: terminate I/O (401260544, 1372160) for zone 5
+zbd      3055  /dev/vda: queued I/O (0, 155648) for zone 0
+zbd      3055  /dev/vda: terminate I/O (0, 155648) for zone 0
+zbd      3055  /dev/vda: queued I/O (201326592, 557056) for zone 3
+zbd      3055  /dev/vda: terminate I/O (201326592, 557056) for zone 3
+zbd      3055  /dev/vda: queued I/O (402632704, 20480) for zone 5
+zbd      3055  /dev/vda: terminate I/O (402632704, 20480) for zone 5
+zbd      3055  /dev/vda: queued I/O (471732224, 1138688) for zone 7
+zbd      3055  /dev/vda: terminate I/O (471732224, 1138688) for zone 7
+zbd      3055  /dev/vda: queued I/O (472870912, 52273152) for zone 7
+zbd      3055  /dev/vda: terminate I/O (472870912, 52273152) for zone 7
+zbd      3055  /dev/vda: queued I/O (134217728, 12312576) for zone 2
+zbd      3055  /dev/vda: terminate I/O (134217728, 12312576) for zone 2
+zbd      3055  /dev/vda: queued I/O (472297472, 9150464) for zone 7
+zbd      3055  /dev/vda: terminate I/O (472297472, 9150464) for zone 7
+zbd      3055  /dev/vda: queued I/O (344526848, 22302720) for zone 5
+zbd      3055  /dev/vda: terminate I/O (344526848, 22302720) for zone 5
+zbd      3055  /dev/vda: queued I/O (146530304, 20955136) for zone 2
+zbd      3055  /dev/vda: terminate I/O (146530304, 20955136) for zone 2
+zbd      3055  /dev/vda: queued I/O (469938176, 16642048) for zone 7
+zbd      3055  /dev/vda: terminate I/O (469938176, 16642048) for zone 7
+zbd      3055  /dev/vda: queued I/O (486580224, 10096640) for zone 7
+zbd      3055  /dev/vda: terminate I/O (486580224, 10096640) for zone 7
+zbd      3055  /dev/vda: queued I/O (531759104, 1138688) for zone 7
+zbd      3055  /dev/vda: terminate I/O (531759104, 1138688) for zone 7
+zbd      3055  /dev/vda: queued I/O (532897792, 2805760) for zone 7
+zbd      3055  /dev/vda: terminate I/O (532897792, 2805760) for zone 7
+zbd      3055  /dev/vda: queued I/O (134217728, 8048640) for zone 2
+zbd      3055  /dev/vda: terminate I/O (134217728, 8048640) for zone 2
+zbd      3055  /dev/vda: queued I/O (134217728, 33267712) for zone 2
+zbd      3055  /dev/vda: terminate I/O (134217728, 33267712) for zone 2
+zbd      3055  /dev/vda: queued I/O (470069248, 1142784) for zone 7
+zbd      3055  /dev/vda: terminate I/O (470069248, 1142784) for zone 7
+zbd      3055  /dev/vda: queued I/O (471212032, 59904000) for zone 7
+zbd      3055  /dev/vda: terminate I/O (471212032, 59904000) for zone 7
+zbd      3055  /dev/vda: queued I/O (470208512, 139264) for zone 7
+zbd      3055  /dev/vda: terminate I/O (470208512, 139264) for zone 7
+zbd      3055  /dev/vda: queued I/O (535703552, 1142784) for zone 7
+zbd      3055  /dev/vda: terminate I/O (535703552, 1142784) for zone 7
+zbd      3055  /dev/vda: queued I/O (135258112, 2707456) for zone 2
+zbd      3055  /dev/vda: terminate I/O (135258112, 2707456) for zone 2
+zbd      3055  /dev/vda: queued I/O (134217728, 33267712) for zone 2
+zbd      3055  /dev/vda: terminate I/O (134217728, 33267712) for zone 2
+zbd      3055  /dev/vda: queued I/O (201326592, 557056) for zone 3
+zbd      3055  /dev/vda: terminate I/O (201326592, 557056) for zone 3
+zbd      3055  /dev/vda: queued I/O (201326592, 557056) for zone 3
+zbd      3055  /dev/vda: terminate I/O (201326592, 557056) for zone 3
+zbd      3055  /dev/vda: queued I/O (536150016, 122880) for zone 7
+zbd      3055  /dev/vda: terminate I/O (536150016, 122880) for zone 7
+zbd      3055  /dev/vda: queued I/O (536272896, 114688) for zone 7
+zbd      3055  /dev/vda: terminate I/O (536272896, 114688) for zone 7
+zbd      3055  /dev/vda: queued I/O (167485440, 32948224) for zone 2
+zbd      3055  /dev/vda: terminate I/O (167485440, 32948224) for zone 2
+zbd      3055  /dev/vda: queued I/O (536387584, 225280) for zone 7
+zbd      3055  /dev/vda: terminate I/O (536387584, 225280) for zone 7
+zbd      3055  /dev/vda: queued I/O (0, 155648) for zone 0
+zbd      3055  /dev/vda: terminate I/O (0, 155648) for zone 0
+zbd      3055  /dev/vda: queued I/O (0, 155648) for zone 0
+zbd      3055  /dev/vda: terminate I/O (0, 155648) for zone 0
+zbd      3055  /dev/vda: queued I/O (201326592, 557056) for zone 3
+zbd      3055  /dev/vda: terminate I/O (201326592, 557056) for zone 3
+zbd      3055  /dev/vda: queued I/O (201326592, 557056) for zone 3
+zbd      3055  /dev/vda: terminate I/O (201326592, 557056) for zone 3
+zbd      3055  /dev/vda: queued I/O (536272896, 114688) for zone 7
+zbd      3055  /dev/vda: terminate I/O (536272896, 114688) for zone 7
+zbd      3055  /dev/vda: queued I/O (200433664, 892928) for zone 2
+zbd      3055  /dev/vda: terminate I/O (200433664, 892928) for zone 2
+zbd      3055  /dev/vda: queued I/O (0, 155648) for zone 0
+zbd      3055  /dev/vda: terminate I/O (0, 155648) for zone 0
+zbd      3055  /dev/vda: queued I/O (0, 155648) for zone 0
+zbd      3055  /dev/vda: terminate I/O (0, 155648) for zone 0
+zbd      3055  /dev/vda: queued I/O (201326592, 557056) for zone 3
+zbd      3055  /dev/vda: terminate I/O (201326592, 557056) for zone 3
+zbd      3055  /dev/vda: queued I/O (201326592, 557056) for zone 3
+zbd      3055  /dev/vda: terminate I/O (201326592, 557056) for zone 3
+zbd      3055  /dev/vda: queued I/O (201883648, 14884864) for zone 3
+zbd      3055  /dev/vda: terminate I/O (201883648, 14884864) for zone 3
+zbd      3055  /dev/vda: queued I/O (216768512, 12709888) for zone 3
+zbd      3055  /dev/vda: terminate I/O (216768512, 12709888) for zone 3
+zbd      3055  /dev/vda: queued I/O (536846336, 24576) for zone 7
+zbd      3055  /dev/vda: terminate I/O (536846336, 24576) for zone 7
+zbd      3055  /dev/vda: queued I/O (201326592, 28151808) for zone 3
+zbd      3055  /dev/vda: terminate I/O (201326592, 28151808) for zone 3
+zbd      3055  /dev/vda: queued I/O (224501760, 2572288) for zone 3
+zbd      3055  /dev/vda: terminate I/O (224501760, 2572288) for zone 3
+zbd      3055  /dev/vda: queued I/O (155648, 32059392) for zone 0
+zbd      3055  /dev/vda: terminate I/O (155648, 32059392) for zone 0
+zbd      3055  zbd_file_reset(/dev/vda): swd = 366174208
+zbd      3055  zbd_convert_to_open_zone(/dev/vda): starting from zone 7 (offset 503816192, buflen 21327872)
+zbd      3055  zbd_convert_to_open_zone(/dev/vda): returning zone 0
+zbd      3055  /dev/vda: terminate I/O (0, 21327872) for zone 0
+zbd      3055  /dev/vda: terminate I/O (21327872, 30081024) for zone 0
+/dev/vda: 51408896 + 37371904 >= 67108864
+fio: zbd.c:1508: zbd_replay_write_order: Assertion `false' failed.
+fio: pid=3055, got signal=6
+
+job: (groupid=0, jobs=1): err= 0: pid=3055: Fri Oct 28 15:00:45 2022
+  lat (usec)   : 250=18.75%, 500=21.25%, 750=5.00%, 1000=3.75%
+  lat (msec)   : 2=8.75%, 4=12.50%, 10=22.50%, 20=5.00%, 50=2.50%
+  cpu          : usr=0.00%, sys=0.00%, ctx=0, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=55,25,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=0B/s (0B/s), 0B/s-0B/s (0B/s-0B/s), io=0B (0B), run=1625-1625msec
+  WRITE: bw=0B/s (0B/s), 0B/s-0B/s (0B/s-0B/s), io=0B (0B), run=1625-1625msec
+
+Disk stats (read/write):
+  vda: ios=743/315, merge=1/1, ticks=2432/2305, in_queue=4737, util=8.99%
+fio: file hash not empty on exit
 FAIL

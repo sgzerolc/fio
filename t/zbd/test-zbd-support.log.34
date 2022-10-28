@@ -1,8 +1,8 @@
 
-fio --max-jobs=16 --aux-path=/tmp --allow_file_create=0 --significant_figures=10 --name=/dev/vda --filename=/dev/vda --offset=0 --size=268435456 --zonemode=zbd --ioengine=psync --iodepth=1 --rw=write --size=134217728 --do_verify=1 --verify=md5 --bs=50331648 --randseed=1098187362 --thread=1 --direct=1
+fio --max-jobs=16 --aux-path=/tmp --allow_file_create=0 --significant_figures=10 --name=/dev/vda --filename=/dev/vda --offset=0 --size=268435456 --zonemode=zbd --ioengine=psync --iodepth=1 --rw=write --size=134217728 --do_verify=1 --verify=md5 --bs=50331648 --randseed=647323946 --thread=1 --direct=1
 
 /dev/vda: (g=0): rw=write, bs=(R) 50331648B-50331648B, (W) 50331648B-50331648B, (T) 50331648B-50331648B, ioengine=psync, iodepth=1
-fio-3.32-75-gc470
+fio-3.32-76-g32676-dirty
 Starting 1 thread
 /dev/vda: block size 50331648 is not a divisor of the zone size 67108864
 
